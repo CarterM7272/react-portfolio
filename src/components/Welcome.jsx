@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import Nav from "./Nav.jsx"
-import Home from './Welcome.jsx';
+import Home from "./pages/Home.jsx"
 import About from './pages/About.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Contact from './pages/Contact.jsx'

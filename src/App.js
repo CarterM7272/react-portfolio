@@ -1,8 +1,8 @@
 import React from 'react';
-import Welcome from "./components/Welcome"
+import Home from "./pages/Home"
 
 
-const App = () => <Welcome />
+const App = () => <Home />
 
 export default App;
 
