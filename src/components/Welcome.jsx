@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 
-import Nav from "./Nav.js"
-import Home from './Welcome';
-import About from './components/About';
-import Contact from './components/pages/Contact';
-import Portfolio from './components/pages/Portfolio';
-import Resume from './Resume';
+import Nav from "./Nav.jsx"
+import Home from './Welcome.jsx';
+import About from './pages/About.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import Contact from './pages/Contact.jsx'
+import Resume from './pages/Resume.jsx';
 
 export default function Welcome() {
   const [currentPage, newPage] = useState('Home');
