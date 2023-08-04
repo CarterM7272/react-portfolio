@@ -1,30 +1,49 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import Nav from "./Nav.jsx"
-import Home from "./pages/Home.jsx"
+import Header from './Header';
+import Home from "./pages/Home.jsx";
 import About from './pages/About.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Contact from './pages/Contact.jsx'
+import Contact from './pages/Contact.jsx';
 import Resume from './pages/Resume.jsx';
 
-export default function Welcome() {
+const HEADER_HEIGHT = '80px';  // Define this here or import from Header
+
+
+const Welcome = () => {
   const [currentPage, newPage] = useState('Home');
+
+  const styles = {
+    mainContent: {
+      paddingTop: HEADER_HEIGHT,
+    },
+  };
 
   const displayPage = () => {
     if (currentPage === 'Home')  {
-      return <Home />
+      return (
+        <Home />
+      )
     }
     if (currentPage === 'About')  {
-      return <About />
+      return (
+        <About />
+      )
     }
     if (currentPage === 'Contact')  {
-      return <Contact />
+      return (
+        <Contact />
+      ) 
     }
     if (currentPage === 'Portfolio')  {
-      return <Portfolio />
+      return (
+        <Portfolio />
+      )
     }
     if (currentPage === 'Resume')  {
-      return <Resume />
+      return (
+        <Resume />
+      )
     }
   }
 
@@ -33,12 +52,13 @@ export default function Welcome() {
 
   return (
     <div>
-      <Nav currentPage={currentPage} changePage={changePage}/>
-      {displayPage()}
+      <Header currentPage={currentPage} changePage={changePage}/>
+      <main style={styles.mainContent}>
+        {displayPage()}
+      </main>
     </div>
-  )
+  );
+};
 
 
-
-
-}
+export default Welcome;
